@@ -1,16 +1,14 @@
 9
-A B C D E F G I K
-13
+A B C D K E F G H
+8
 A B
-A D
 A C
-B I
-B G
-C F
+A D
+B K
 C E
-D C
 D F
-F K
-E K
-E G
-I G
+D G
+G H
+
+A G 
+

@@ -1,0 +1,9 @@
+Phat trien trang thai | Trang thai ke | Danh sach L
+           A          | C D B         | C D B 
+           C          | F E           | D B F E 
+           D          |               | B F E 
+           B          | G I           | F E G I 
+           F          | K             | E G I K 
+           E          |               | G I K 
+           G          |               | I K 
+Đường đi A to G:  A B G 
