@@ -102,7 +102,7 @@ public class BreadthFirstPaths {
     }
     
     
-    // In đường
+    
     public void printPath(myGraph G, int source, int destination, String[] vertexNames, PrintWriter writer) {
         if (hasPathTo(destination)) {
             writer.printf("Đường đi %s đến %s:  ", vertexNames[source], vertexNames[destination].charAt(0));

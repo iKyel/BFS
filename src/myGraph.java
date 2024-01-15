@@ -21,7 +21,7 @@ public class myGraph {
         }
     }
     
-    // đọc từ txt
+    // đọc đồ thị từ txt
     public myGraph(In in) {
         if (in == null) throw new IllegalArgumentException("argument is null");
         try {
