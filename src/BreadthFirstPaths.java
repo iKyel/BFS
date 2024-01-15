@@ -21,15 +21,12 @@ public class BreadthFirstPaths {
         this.s = s;
         myBFS(G, s, des, vertexNames, writer);
         bfs(G, s);
-        
     }
 
     public void myBFS(myGraph G, int source, int des, String[] vertexNames, PrintWriter writer) {
     	
     		writer.printf("Phat trien trang thai | Trang thai ke | Danh sach L");
     		writer.printf("\n");
-//        	marked = new boolean[G.V()];
-//            edgeTo = new int[G.V()];
             
             Queue<Integer> queue = new LinkedList<>();
             marked[source] = true;
@@ -103,7 +100,21 @@ public class BreadthFirstPaths {
 
         return path;
     }
+    
+    public void printPath(myGraph G, int source, int destination, String[] vertexNames, PrintWriter writer) {
+        if (hasPathTo(destination)) {
+            writer.printf("Đường đi %s đến %s:  ", vertexNames[source], vertexNames[destination].charAt(0));
+            for (int x : pathTo(destination)) {
+                writer.print(vertexNames[x] + " ");
+            }
+            writer.println();
+        } else {
+            writer.printf("%s to %c: not connected\n", vertexNames[source], vertexNames[destination].charAt(0));
+        }
+    }
+    
 
+        
     public static void main(String[] args) {
     	
 //    	boolean[] marked;
@@ -152,15 +163,7 @@ public class BreadthFirstPaths {
             	BreadthFirstPaths myBFS = new BreadthFirstPaths(G, sourceIndex, destinationIndex,vertexNames, writer);
             	
             	// in đường
-            	if (myBFS.hasPathTo(destinationIndex)) {
-                	writer.printf("Đường đi %s to %s:  ", sourceVertex, vertexNames[destinationIndex].charAt(0));
-                    for (int x : myBFS.pathTo(destinationIndex)) {
-                        writer.print(vertexNames[x] + " ");
-                    }
-                    writer.println();
-                } else {
-                    writer.printf("%c to %c:  not connected\n", sourceVertex, vertexNames[destinationIndex].charAt(0));
-                } 
+            	myBFS.printPath(G, sourceIndex, destinationIndex, vertexNames, writer);
             } catch (IOException e) {
                 e.printStackTrace();
             }

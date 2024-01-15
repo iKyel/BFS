@@ -6,4 +6,4 @@ Phat trien trang thai | Trang thai ke | Danh sach L
            F          | K             | E G I K 
            E          |               | G I K 
            G          |               | I K 
-Đường đi A to G:  A B G 
+Đường đi A đến G:  A B G 
