@@ -20,7 +20,8 @@ public class myGraph {
             adj[v] = new Bag<Integer>();
         }
     }
-
+    
+    // đọc từ txt
     public myGraph(In in) {
         if (in == null) throw new IllegalArgumentException("argument is null");
         try {
@@ -44,6 +45,7 @@ public class myGraph {
         }
     }
 
+    // đọc đồ thị
 //    public myGraph(myGraph G) {
 //        this.V = G.V();
 //        this.E = G.E();
