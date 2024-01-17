@@ -1,0 +1,29 @@
+10
+A 14
+C 15 
+D 6 
+E 8
+F 7
+G 12
+H 10
+K 2
+I 4
+B 0
+15
+A C 9
+A D 7
+A E 13
+A F 20
+F G 4
+F I 6
+D E 4
+E I 3
+E K 4
+I K 9
+D H 8
+H K 5
+C H 6
+K B 6
+I B 5
+A 
+B
