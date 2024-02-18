@@ -1,0 +1,7 @@
+Phat trien TT | Trang thai ke | Danh sach L 
+A20           |D6 E7 C15      |D6 E7 C15 
+D6            |I8 F10         |E7 I8 F10 C15 
+E7            |G5 K12         |G5 I8 F10 K12 C15 
+G5            |H3 B0          |B0 H3 I8 F10 K12 C15 
+B0            |TTKT-DUNG
+Shortest path from A to B: A E G B 

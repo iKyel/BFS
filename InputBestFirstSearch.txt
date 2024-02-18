@@ -1,0 +1,27 @@
+10
+A 20
+C 15
+E 7
+D 6
+F 10
+I 8
+B 0
+H 3
+G 5
+K 12
+13
+A C
+A E
+A D
+D F
+D I
+E K
+E G
+F B
+I B
+I G
+G B
+G H
+H B
+A 
+B

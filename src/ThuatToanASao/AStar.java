@@ -13,8 +13,8 @@ public class AStar {
     private int[] edgeTo;    // Đỉnh trước đỉnh hiện tại trên đường đi ngắn nhất
     private IndexMinPQ<Double> pq; // Priority queue để chọn đỉnh có chi phí f thấp nhất
 
-    public AStar(myDirectGraph G, int start, int goal, String outputFileName) {
-    	try (PrintWriter writer = new PrintWriter(new FileWriter(outputFileName))){ 	
+    public AStar(myDirectGraph G, int start, int goal, PrintWriter writer) {
+    	 	
         	this.start = start;
             this.goal = goal;
             distTo = new double[G.V()]; // g
@@ -60,13 +60,10 @@ public class AStar {
                 writer.print("]");
                 writer.print("\n\n");               
             } 
-    	}  catch (IOException e) {
-            e.printStackTrace();
-        }
+    	
         
     }
     
-
     // thuật toán 
     private void relax(myDirectGraph G, int v, int w, PrintWriter writer) {
     	// Gọi biến
@@ -167,14 +164,17 @@ public class AStar {
         int goal = G.indexOfVertex(goalVertex);
         
         // Kết thúc đọc file
+        try (PrintWriter writer = new PrintWriter(new FileWriter("outputASao.txt"))){
+        	AStar astar = new AStar(G, start, goal, writer);
+        	// in đường đi
+            Iterable<Integer> path = astar.pathTo();
+            for (int vertex : path) {
+            	writer.print(G.getVertexNames()[vertex] + " ");
+            }
+        }  catch (IOException e) {
+            e.printStackTrace();
+        }
         
-        AStar astar = new AStar(G, start, goal, "outputASao.txt");
-
-        // in đường đi
-//        Iterable<Integer> path = astar.pathTo();
-//        for (int vertex : path) {
-//            StdOut.print(G.getVertexNames()[vertex] + " ");
-//        }
     }
 }
 
